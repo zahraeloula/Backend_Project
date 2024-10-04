@@ -31,7 +31,7 @@ public class CloudinaryService {
         File file = convert(multipartFile);
         Map result = cloudinary.uploader().upload(file, ObjectUtils.emptyMap());
         if (!Files.deleteIfExists(file.toPath())) {
-            throw new IOException("Failed to delete temporary file: " + file.getAbsolutePath());
+            throw new IOException("Failed to delete temporary file test: " + file.getAbsolutePath());
         }
         return result;
     }
